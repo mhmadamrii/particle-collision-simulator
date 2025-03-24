@@ -23,3 +23,27 @@ def sort_particles_by_energy(particles):
             if particles[j].energy > particles[j + 1].energy:
                 particles[j], particles[j + 1] = particles[j + 1], particles[j]
     return particles
+
+if __name__ == "__main__":
+    # Create two particles
+    particle1 = Particle(mass=2, velocity=5)
+    particle2 = Particle(mass=3, velocity=-3)
+
+    print("Before collision:")
+    print(particle1)
+    print(particle2)
+
+    # Simulate collision
+    collide(particle1, particle2)
+
+    print("\nAfter collision:")
+    print(particle1)
+    print(particle2)
+
+    # Store and sort particles
+    particles = [particle1, particle2]
+    sorted_particles = sort_particles_by_energy(particles)
+
+    print("\nSorted by energy:")
+    for p in sorted_particles:
+        print(p)
