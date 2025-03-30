@@ -1,10 +1,13 @@
-# recursively solve problem
+# reverse string
 
-def add_two_nums(a, b):
-    if b == 0:
-        return a
+def reverse_string(s):
+    print(s[::-1])
 
-    if b > 0:
-        return add_two_nums(a + 1, b - 1)
+def factorial(n):
+    if n == 0:
+        return 1
+    
+    return n * factorial(n - 1)
 
-print(add_two_nums(1, 4))
+reverse_string("Hello")
+print(factorial(4))
