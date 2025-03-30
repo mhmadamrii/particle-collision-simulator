@@ -9,5 +9,20 @@ def factorial(n):
     
     return n * factorial(n - 1)
 
-reverse_string("Hello")
-print(factorial(4))
+# write a function that find all pairs that sum to zero, and return list of that pairs
+
+def find_sum_to_zero(ls):
+    n = len(ls)
+    pairs = []
+
+    for i in range(n):
+        for j in range(i + 1, n):
+            print(f"first = {ls[i]}, second = {ls[j]}")
+            if ls[i] + ls[j] == 0:
+                pairs.append((ls[i], ls[j]))
+    
+    return pairs
+
+
+momentum = [3, -1, 2, -3, 1, -2, 4]
+print(find_sum_to_zero(momentum))
