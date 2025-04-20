@@ -8,6 +8,21 @@ def lowest_student_score_name():
     lowest = min(students, key=lambda x: x[1])[1]
     return [x[0] for x in students if x[1] == lowest]
 
-print(lowest_student_score_name())
+hi = lambda : 'hellow'
 
+# Create a list of the cubes of all numbers from 1 to 10 using list comprehension.
+cubes = [x**3 for x in range(1, 11)]
 
+odds = list(filter(lambda x: x % 2 == 1, range(10)))
+
+m = [x for x in range(1, 31) if x % 5 == 0]
+
+n = list(map(lambda x: x**2, range(1, 11)))
+
+words = ["apple", "ant", "banana", "avocado", "berry", "apricot"]
+
+w = [x for x in words if len(x) > 5]
+
+print(m)
+print(n)
+print(w)
